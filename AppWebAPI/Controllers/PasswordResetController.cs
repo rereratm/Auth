@@ -67,9 +67,9 @@ namespace AppWebAPI.Controllers
 
         private async Task<bool> SendResetCodeEmail(string email, string resetCode)
         {
-            var apiKey = "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";
+            var apiKey = "yourapikey";
             var client = new SendGridClient(apiKey);
-            var from = new EmailAddress("admin@konrap.com", "ANABILTEK");
+            var from = new EmailAddress("yourmail", "yourcompany");
             var subject = "Password Reset";
             var to = new EmailAddress(email);
             var plainTextContent = $"Your password reset code is: {resetCode}";
