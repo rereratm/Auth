@@ -1,17 +1,22 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace AppDAL.LoginSecurity.Encryption
-{//Microsoft.IdentityModel.Tokens => Security Key için kullanılan kütüphane
-    public static class SecurityKeyHelper
+public static class SecurityKeyHelper
+{
+    public static SecurityKey CreateSecurityKey(string key)
     {
-        public static SecurityKey CreateSecurityKey(string securityKey)
+        // Derive a 64-byte key using SHA-256
+        using (var sha256 = SHA256.Create())
         {
-            return new SymmetricSecurityKey(Encoding.UTF8.GetBytes(securityKey));
+            var keyBytes = Encoding.UTF8.GetBytes(key);
+            var hashBytes = sha256.ComputeHash(keyBytes);
+
+            // Ensure the hash is at least 64 bytes
+            var fullKeyBytes = new byte[64];
+            Buffer.BlockCopy(hashBytes, 0, fullKeyBytes, 0, hashBytes.Length);
+            return new SymmetricSecurityKey(fullKeyBytes);
         }
     }
 }

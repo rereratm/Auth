@@ -80,7 +80,7 @@ namespace Perkon.WebAPI
                     ValidateIssuerSigningKey = true,
                     ValidIssuer = "AnatechYazilim",
                     ValidAudience = "AnatechYazilim",
-                    IssuerSigningKey = SecurityKeyHelper.CreateSecurityKey("a58bkhd0-98bk-hd94-bvn3-7dngp44dma0s"),
+                    IssuerSigningKey = SecurityKeyHelper.CreateSecurityKey(tokenOptions.SecurityKey),
                     ClockSkew = TimeSpan.Zero
                 };
             });
