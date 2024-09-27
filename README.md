@@ -9,6 +9,8 @@ Bu proje, .NET teknolojisi kullanılarak geliştirilmiş Kullanıcı CRUD işlem
 - MySQL
 - JWT
 - C#
+- 
+## Yol haritası
 
 Auth/
 ├── Auth.sln                        # Proje çözüm dosyası
@@ -78,5 +80,3 @@ Auth/
 │   ├── Controllers/                # API Controller'ları
 │       ├── AuthController.cs
 │       └── PasswordResetController.cs
-
-  
