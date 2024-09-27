@@ -10,35 +10,36 @@ Bu proje, .NET teknolojisi kullanılarak geliştirilmiş Kullanıcı CRUD işlem
 - JWT
 - C#
 
-├── Auth.sln
-├── AppBusiness/
-│   ├── AppBusiness.csproj
-│   ├── Abstract/
-│   │   └── IAuthService.cs
-│   ├── Concrete/
-│   │   └── AuthService.cs
-│   └── Validation/
-│       ├── Kullanici/
+Auth/
+├── Auth.sln                        # Proje çözüm dosyası
+├── AppBusiness/                    # İş katmanı (Business Layer)
+│   ├── AppBusiness.csproj          # Proje dosyası
+│   ├── Abstract/                   # Arayüz ve Abstraction sınıfları
+│   │   └── IAuthService.cs         # Authentication arayüzü
+│   ├── Concrete/                   # Gerçekleştirim (Implementation) sınıfları
+│   │   └── AuthService.cs          # Authentication servisi
+│   └── Validation/                 # Doğrulama işlemleri
+│       ├── Kullanici/              # Kullanıcı doğrulamaları
 │       │   └── KullaniciUpdateValidator.cs
-│       └── LoginRegister/
+│       └── LoginRegister/          # Giriş ve kayıt doğrulamaları
 │           ├── KullaniciLoginValidator.cs
 │           └── KullaniciRegisterValidator.cs
-├── AppCore/
-│   ├── AppCore.csproj
-│   ├── Entities/
-│   │   ├── Audit.cs
-│   │   ├── IEntity.cs
-│   │   └── ISoftDeleted.cs
-├── AppDAL/
-│   ├── AppDAL.csproj
-│   ├── Configuration/
+├── AppCore/                        # Çekirdek (Core) katmanı
+│   ├── AppCore.csproj              # Proje dosyası
+│   ├── Entities/                   # Varlık sınıfları (Entities)
+│   │   ├── Audit.cs                # Denetim sınıfı
+│   │   ├── IEntity.cs              # Temel varlık arayüzü
+│   │   └── ISoftDeleted.cs         # Soft delete özelliği için arayüz
+├── AppDAL/                         # Veri erişim katmanı (Data Access Layer)
+│   ├── AppDAL.csproj               # Proje dosyası
+│   ├── Configuration/              # Entity yapılandırmaları
 │   │   ├── KullaniciConfiguration.cs
 │   │   ├── RoleConfiguration.cs
 │   │   ├── UserActivityConfiguration.cs
 │   │   └── UserRoleConfiguration.cs
-│   ├── Context/
+│   ├── Context/                    # Veritabanı bağlamı (DbContext)
 │   │   └── AuthContext.cs
-│   ├── DTO/
+│   ├── DTO/                        # Veri Transfer Obje'leri (DTO)
 │   │   ├── KullaniciDTO/
 │   │   │   ├── KullaniciGetDTO.cs
 │   │   │   ├── KullaniciListDTO.cs
@@ -48,13 +49,13 @@ Bu proje, .NET teknolojisi kullanılarak geliştirilmiş Kullanıcı CRUD işlem
 │   │       ├── KullaniciLoginDTO.cs
 │   │       ├── KullaniciRegisterDTO.cs
 │   │       └── LogoutRequestDTO.cs
-│   ├── Entity/
+│   ├── Entity/                     # Veritabanı varlıkları
 │   │   ├── Kullanici.cs
 │   │   ├── PwReset.cs
 │   │   ├── Role.cs
 │   │   ├── UserActivity.cs
 │   │   └── UserRole.cs
-│   ├── LoginSecurity/
+│   ├── LoginSecurity/              # Giriş güvenliği işlemleri
 │   │   ├── Encryption/
 │   │   │   ├── SecurityKeyHelper.cs
 │   │   │   └── SigningCredentialsHelper.cs
@@ -65,19 +66,17 @@ Bu proje, .NET teknolojisi kullanılarak geliştirilmiş Kullanıcı CRUD işlem
 │   │   │   ├── PayloadRoleIdentifier.cs
 │   │   │   └── RoleExtension.cs
 │   │   └── Helper/
-│   │       ├── HashingHelper.cs
-│   │       ├── ITokenHelper.cs
-│   │       └── TokenHelper.cs
-├── AppWebAPI/
+│       ├── HashingHelper.cs
+│       ├── ITokenHelper.cs
+│       └── TokenHelper.cs
+├── AppWebAPI/                      # Web API katmanı
 │   ├── appsettings.Development.json
 │   ├── appsettings.json
 │   ├── AppWebAPI.csproj
-│   ├── Program.cs
-│   ├── Startup.cs
-│   ├── Controllers/
-│   │   ├── AuthController.cs
-│   │   └── PasswordResetController.cs
-
-
+│   ├── Program.cs                  # Uygulama giriş noktası
+│   ├── Startup.cs                  # API yapılandırması
+│   ├── Controllers/                # API Controller'ları
+│       ├── AuthController.cs
+│       └── PasswordResetController.cs
 
   
