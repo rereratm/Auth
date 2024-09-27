@@ -11,7 +11,6 @@ Bu proje, .NET teknolojisi kullanılarak geliştirilmiş Kullanıcı CRUD işlem
 
 ## Klasör Yapısı
 
-Auth/
 ├── Auth.sln                       # Proje çözüm dosyası
 ├── AppBusiness/                   # İş katmanı (Business Layer)
 │   ├── AppBusiness.csproj         # Proje dosyası
