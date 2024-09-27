@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-# Auth
-Bu proje, .NET teknolojisi kullanılarak geliştirilmiş Kullanıcı CRUD işlemlerini gerçekleştireceğimiz bir web uygulamasıdır. Kullanıcının parolasını şifreleme, parola sıfırlama ve mail gönderimi gibi işlemleri gerçeklei
-=======
-
 # Auth
 Bu proje, .NET teknolojisi kullanılarak geliştirilmiş Kullanıcı CRUD işlemlerinin örneklerinin bulunduğu bir web uygulamasıdır. Kullanıcının parolasını şifreleme, parola sıfırlama ve mail gönderimi gibi işlemleri gerçekleştirir.
->>>>>>> a645c2aa3a8890f90aa9d466c8a1abe4e02847eb
 
 ## Teknolojiler
 
@@ -15,16 +9,8 @@ Bu proje, .NET teknolojisi kullanılarak geliştirilmiş Kullanıcı CRUD işlem
 - JWT
 - C#
 
-<<<<<<< HEAD
-
 ## Klasör Yapısı
 
-
-=======
-  
-## Klasör Yapısı
-
->>>>>>> a645c2aa3a8890f90aa9d466c8a1abe4e02847eb
 Auth/
 ├── Auth.sln                       # Proje çözüm dosyası
 ├── AppBusiness/                   # İş katmanı (Business Layer)
