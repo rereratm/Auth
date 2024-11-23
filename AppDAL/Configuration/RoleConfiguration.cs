@@ -18,9 +18,9 @@ namespace AppDAL.Configuration
             builder.Property(p => p.Name).HasMaxLength(100).IsRequired();
 
             builder.HasData(new Role { Id = 1, Name = "Admin" });
-            builder.HasData(new Role { Id = 2, Name = "Kullanıcı" });
-            builder.HasData(new Role { Id = 3, Name = "Yönetici" });
-            builder.HasData(new Role { Id = 4, Name = "Bakanlık" });
+            builder.HasData(new Role { Id = 2, Name = "Kullanici" });
+            builder.HasData(new Role { Id = 3, Name = "Yonetici" });
+
         }
     }
 }
